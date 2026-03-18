@@ -374,25 +374,25 @@ const GoldenQuestions = () => (
 );
 
 const IcebergSection = () => (
-  <section className="py-32 bg-[#FAFCFF] relative overflow-hidden" id="iceberg">
+  <section className="py-20 md:py-32 bg-[#FAFCFF] relative overflow-hidden" id="iceberg">
     {/* Clean, technical background pattern matching the Hero */}
     <div className="absolute inset-0 z-0 opacity-[0.03] pointer-events-none" style={{ backgroundImage: 'radial-gradient(#003366 1px, transparent 1px)', backgroundSize: '40px 40px' }}></div>
     
-    <div className="container mx-auto px-6 relative z-10">
-      <div className="max-w-3xl mx-auto text-center mb-24">
+    <div className="container mx-auto px-4 md:px-6 relative z-10">
+      <div className="max-w-3xl mx-auto text-center mb-16 md:mb-24">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="inline-flex items-center gap-3 px-5 py-2 mb-10 text-[11px] font-black tracking-[0.25em] text-primary uppercase bg-white shadow-sm rounded-full border border-slate-100"
+          className="inline-flex items-center gap-3 px-5 py-2 mb-8 md:mb-10 text-[10px] md:text-[11px] font-black tracking-[0.25em] text-primary uppercase bg-white shadow-sm rounded-full border border-slate-100"
         >
           <div className="w-2 h-2 rounded-full bg-secondary animate-pulse"></div>
           Metáfora Visual do SST
         </motion.div>
         
-        <h2 className="text-4xl md:text-6xl font-black mb-10 leading-[1.1] text-primary tracking-tight">O Iceberg <br /><span className="text-slate-400">da Gestão</span></h2>
-        <p className="text-base md:text-lg text-slate-500 mb-12 leading-relaxed max-w-2xl mx-auto font-medium">
-          Muitos empresários veem apenas a ponta do iceberg (o documento). <br />Nós entregamos a base que sustenta sua tranquilidade.
+        <h2 className="text-3xl md:text-5xl lg:text-6xl font-black mb-8 md:mb-10 leading-[1.1] text-primary tracking-tight px-2">O Iceberg <br /><span className="text-slate-400">da Gestão</span></h2>
+        <p className="text-base md:text-lg text-slate-500 mb-10 md:mb-12 leading-relaxed max-w-2xl mx-auto font-medium px-4">
+          Muitos empresários veem apenas a ponta do iceberg (o documento). <br className="hidden md:block" />Nós entregamos a base que sustenta sua tranquilidade.
         </p>
       </div>
 
@@ -402,16 +402,16 @@ const IcebergSection = () => (
           <motion.div 
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
-            className="w-full md:w-3/4 bg-white rounded-t-[40px] shadow-[0_-20px_50px_-10px_rgba(0,0,0,0.05)] relative z-20 p-12 flex flex-col items-center justify-center border-x-2 border-t-2 border-slate-50"
+            className="w-full md:w-3/4 bg-white rounded-t-[32px] md:rounded-t-[40px] shadow-[0_-20px_50px_-10px_rgba(0,0,0,0.05)] relative z-20 p-8 md:p-12 flex flex-col items-center justify-center border-x-2 border-t-2 border-slate-50"
           >
             <div className="flex items-baseline gap-2 mb-4">
-              <span className="text-secondary font-black text-5xl">30%</span>
-              <span className="text-slate-400 font-bold uppercase tracking-widest text-[10px]">Visível</span>
+              <span className="text-secondary font-black text-4xl md:text-5xl">30%</span>
+              <span className="text-slate-400 font-bold uppercase tracking-widest text-[9px] md:text-[10px]">Visível</span>
             </div>
-            <h4 className="font-black text-primary text-xl uppercase tracking-widest mb-4">A Ponta: O Documento</h4>
-            <div className="flex flex-wrap justify-center gap-3">
+            <h4 className="font-black text-primary text-lg md:text-xl uppercase tracking-widest mb-4 text-center">A Ponta: O Documento</h4>
+            <div className="flex flex-wrap justify-center gap-2 md:gap-3">
                {["ASO", "PGR", "PCMSO", "LTCAT", "CLCB", "AVCB", "INSALUBRIDADE", "PERICULOSIDADE"].map(tag => (
-                 <span key={tag} className="px-3 py-1.5 bg-slate-50 text-slate-400 rounded-full text-[10px] font-black border border-slate-100 tracking-widest">{tag}</span>
+                 <span key={tag} className="px-2.5 py-1.5 md:px-3 md:py-1.5 bg-slate-50 text-slate-400 rounded-full text-[8px] md:text-[10px] font-black border border-slate-100 tracking-widest">{tag}</span>
                ))}
             </div>
           </motion.div>
@@ -426,25 +426,25 @@ const IcebergSection = () => (
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.3 }}
-            className="w-full bg-primary rounded-b-[60px] shadow-[0_50px_100px_-20px_rgba(0,51,102,0.2)] relative z-10 p-12 md:p-20 text-white overflow-hidden"
+            className="w-full bg-primary rounded-b-[40px] md:rounded-b-[60px] shadow-[0_50px_100px_-20px_rgba(0,51,102,0.2)] relative z-10 p-8 md:p-20 text-white overflow-hidden"
           >
             <div className="absolute top-0 left-0 w-full h-full opacity-5 pointer-events-none">
-              <ShieldCheck size={400} className="absolute -bottom-20 -right-20 rotate-12" />
+              <ShieldCheck size={400} className="absolute -bottom-20 -right-20 rotate-12 hidden md:block" />
             </div>
 
-            <div className="relative z-20 flex flex-col lg:flex-row gap-16 items-center">
+            <div className="relative z-20 flex flex-col lg:flex-row gap-12 lg:gap-16 items-center">
               <div className="text-center lg:text-left">
                 <div className="flex items-baseline gap-2 mb-6 justify-center lg:justify-start">
-                  <span className="text-secondary font-black text-7xl">70%</span>
-                  <span className="text-white/40 font-bold uppercase tracking-[0.3em] text-[10px]">O Real Valor</span>
+                  <span className="text-secondary font-black text-6xl md:text-7xl">70%</span>
+                  <span className="text-white/40 font-bold uppercase tracking-[0.3em] text-[9px] md:text-[10px]">O Real Valor</span>
                 </div>
-                <h4 className="font-black text-3xl md:text-4xl uppercase tracking-tight mb-8">Blindagem Jurídica <br /><span className="text-secondary">& Gestão Ativa</span></h4>
-                <p className="text-white/70 text-base md:text-lg mb-10 max-w-sm font-medium leading-relaxed">
+                <h4 className="font-black text-2xl md:text-4xl uppercase tracking-tight mb-6 md:mb-8 leading-tight">Blindagem Jurídica <br /><span className="text-secondary">& Gestão Ativa</span></h4>
+                <p className="text-white/70 text-base md:text-lg mb-8 md:mb-10 max-w-sm font-medium leading-relaxed mx-auto lg:mx-0">
                   É aqui que sua empresa economiza. Prevenção de multas, defesas técnicas e monitoramento ativo.
                 </p>
               </div>
               
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 w-full">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 md:gap-6 w-full">
                 {[
                   "Monitoramento Proativo",
                   "Defesa Médica Estratégica",
@@ -453,16 +453,16 @@ const IcebergSection = () => (
                   "Laudos de Insalubridade",
                   "Suporte Jurídico-Técnico"
                 ].map((item, idx) => (
-                  <div key={idx} className="flex gap-4 items-center bg-white/5 p-5 rounded-2xl border border-white/10 hover:bg-white/10 transition-colors group">
-                    <CheckCircle2 className="text-secondary group-hover:scale-110 transition-transform" size={20} />
-                    <span className="text-sm font-black tracking-tight uppercase text-white/90">{item}</span>
+                  <div key={idx} className="flex gap-3 md:gap-4 items-center bg-white/5 p-4 md:p-5 rounded-xl md:rounded-2xl border border-white/10 hover:bg-white/10 transition-colors group">
+                    <CheckCircle2 className="text-secondary group-hover:scale-110 transition-transform shrink-0" size={18} md:size={20} />
+                    <span className="text-xs md:text-sm font-black tracking-tight uppercase text-white/90 leading-tight">{item}</span>
                   </div>
                 ))}
               </div>
             </div>
             
-            <div className="mt-20 pt-10 border-t border-white/10 text-center">
-               <p className="text-secondary font-black text-lg italic tracking-tight">"O documento você faz com qualquer um. A gestão, só com quem entende do seu negócio."</p>
+            <div className="mt-12 md:mt-20 pt-8 md:pt-10 border-t border-white/10 text-center px-4">
+               <p className="text-secondary font-black text-base md:text-lg italic tracking-tight leading-relaxed">"O documento você faz com qualquer um. A gestão, só com quem entende do seu negócio."</p>
             </div>
           </motion.div>
         </div>
@@ -473,7 +473,7 @@ const IcebergSection = () => (
 
 const Comparison = () => (
   <section className="py-20 md:py-32 bg-[#F1F5F9]" id="metodo">
-    <div className="container mx-auto px-6">
+    <div className="container mx-auto px-4 md:px-6">
       <div className="max-w-4xl mx-auto text-center mb-16 md:mb-24">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -483,8 +483,8 @@ const Comparison = () => (
         >
           O Diferencial Centro Vida
         </motion.div>
-        <h2 className="text-3xl md:text-5xl lg:text-6xl font-black mb-8 leading-[1.1] text-primary tracking-tight">O Efeito <span className="text-secondary italic">Centro Vida</span></h2>
-        <p className="text-base md:text-lg text-slate-500 font-medium max-w-2xl mx-auto leading-relaxed">
+        <h2 className="text-3xl md:text-5xl lg:text-6xl font-black mb-8 leading-[1.1] text-primary tracking-tight px-2">O Efeito <span className="text-secondary italic">Centro Vida</span></h2>
+        <p className="text-base md:text-lg text-slate-500 font-medium max-w-2xl mx-auto leading-relaxed px-4">
           A diferença entre apenas cumprir burocracia e ter uma **gestão estratégica** que protege seu lucro e sua liberdade.
         </p>
       </div>
@@ -493,13 +493,13 @@ const Comparison = () => (
         {/* Lado A: Caos */}
         <motion.div 
           whileHover={{ y: -5 }}
-          className="bg-white p-8 md:p-10 rounded-[32px] md:rounded-[40px] border border-slate-200 shadow-sm relative overflow-hidden"
+          className="bg-white p-6 md:p-10 rounded-[32px] md:rounded-[40px] border border-slate-200 shadow-sm relative overflow-hidden"
         >
           <div className="flex items-center gap-4 mb-8">
-            <div className="w-12 h-12 bg-red-50 text-red-500 rounded-2xl flex items-center justify-center">
+            <div className="w-12 h-12 bg-red-50 text-red-500 rounded-2xl flex items-center justify-center shrink-0">
               <AlertCircle size={24} />
             </div>
-            <h3 className="text-2xl font-black text-slate-800 tracking-tight">O Caos da "Burocracia"</h3>
+            <h3 className="text-xl md:text-2xl font-black text-slate-800 tracking-tight leading-tight">O Caos da "Burocracia"</h3>
           </div>
           <ul className="space-y-6">
             {[
@@ -521,16 +521,16 @@ const Comparison = () => (
         {/* Lado B: Centro Vida */}
         <motion.div 
           whileHover={{ y: -5 }}
-          className="bg-primary p-8 md:p-10 rounded-[32px] md:rounded-[40px] shadow-[0_40px_80px_-15px_rgba(0,51,102,0.3)] relative overflow-hidden group border border-primary-light"
+          className="bg-primary p-6 md:p-10 rounded-[32px] md:rounded-[40px] shadow-[0_40px_80px_-15px_rgba(0,51,102,0.3)] relative overflow-hidden group border border-primary-light"
         >
-          <div className="absolute top-0 right-0 p-8 opacity-5 group-hover:opacity-10 transition-opacity">
+          <div className="absolute top-0 right-0 p-8 opacity-5 group-hover:opacity-10 transition-opacity hidden md:block">
              <ShieldCheck size={150} className="text-white" />
           </div>
           <div className="flex items-center gap-4 mb-8 relative z-10">
-            <div className="w-12 h-12 bg-secondary text-white rounded-2xl flex items-center justify-center shadow-xl shadow-secondary/20">
+            <div className="w-12 h-12 bg-secondary text-white rounded-2xl flex items-center justify-center shadow-xl shadow-secondary/20 shrink-0">
               <CheckCircle2 size={24} />
             </div>
-            <h3 className="text-2xl font-black text-white tracking-tight">Hub de Gestão Centro Vida</h3>
+            <h3 className="text-xl md:text-2xl font-black text-white tracking-tight leading-tight">Hub de Gestão Centro Vida</h3>
           </div>
           <ul className="space-y-6 relative z-10">
             {[
@@ -734,54 +734,54 @@ const MultiStepForm = () => {
       `*WhatsApp:* ${formData.phone}%0A%0A` +
       `_Gostaria de receber o diagnóstico em PDF._`;
     
-    const whatsappUrl = `https://wa.me/5519999999999?text=${message}`; // Placeholder number
+    const whatsappUrl = `https://wa.me/5519998397305?text=${message}`;
     window.open(whatsappUrl, '_blank');
   };
 
   return (
-    <section className="py-32 bg-primary relative overflow-hidden">
+    <section className="py-20 md:py-32 bg-primary relative overflow-hidden">
       <div className="absolute top-0 left-0 w-full h-full opacity-10 pointer-events-none">
         <div className="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-secondary/20 to-transparent"></div>
         <div className="absolute -bottom-24 -left-24 w-96 h-96 bg-secondary/30 rounded-full blur-[100px]"></div>
       </div>
 
-      <div className="container mx-auto px-6 relative z-10">
-        <div className="max-w-4xl mx-auto grid grid-cols-1 lg:grid-cols-2 bg-white rounded-[60px] shadow-2xl overflow-hidden">
+      <div className="container mx-auto px-4 md:px-6 relative z-10">
+        <div className="max-w-4xl mx-auto grid grid-cols-1 lg:grid-cols-2 bg-white rounded-[32px] md:rounded-[60px] shadow-2xl overflow-hidden">
           {/* Info Side */}
-          <div className="bg-slate-50 p-12 lg:p-20 flex flex-col justify-center">
-             <h2 className="text-4xl font-black mb-8 text-primary">Receba seu Diagnóstico</h2>
-             <p className="text-slate-500 text-lg mb-12">Analisaremos seu nível de exposição a riscos trabalhistas e eSocial em 15 minutos.</p>
-             <div className="space-y-6">
+          <div className="bg-slate-50 p-8 md:p-12 lg:p-20 flex flex-col justify-center">
+             <h2 className="text-3xl md:text-4xl font-black mb-6 md:mb-8 text-primary leading-tight">Receba seu Diagnóstico</h2>
+             <p className="text-slate-500 text-base md:text-lg mb-8 md:mb-12">Analisaremos seu nível de exposição a riscos trabalhistas e eSocial em 15 minutos.</p>
+             <div className="space-y-4 md:space-y-6">
                 {[
                   "Avaliação de Riscos (PGR)",
                   "Laudos de Insalubridade",
                   "Gestão do eSocial",
                   "CLCB / AVCB (Bombeiro)"
                 ].map(item => (
-                  <div key={item} className="flex items-center gap-4">
-                    <div className="w-8 h-8 bg-secondary/10 text-secondary rounded-full flex items-center justify-center shrink-0">
-                       <CheckCircle2 size={18} />
+                  <div key={item} className="flex items-center gap-3 md:gap-4">
+                    <div className="w-7 h-7 md:w-8 md:h-8 bg-secondary/10 text-secondary rounded-full flex items-center justify-center shrink-0">
+                       <CheckCircle2 size={16} md:size={18} />
                     </div>
-                    <span className="font-bold text-slate-700">{item}</span>
+                    <span className="font-bold text-slate-700 text-sm md:text-base">{item}</span>
                   </div>
                 ))}
              </div>
           </div>
 
           {/* Form Side */}
-          <div className="p-12 lg:p-20 flex flex-col justify-center">
+          <div className="p-8 md:p-12 lg:p-20 flex flex-col justify-center border-t lg:border-t-0 lg:border-l border-slate-100">
             {/* Steps Indicator */}
-            <div className="flex items-center gap-4 mb-12">
+            <div className="flex items-center gap-3 md:gap-4 mb-8 md:mb-12">
               {[1, 2, 3].map(s => (
                 <div key={s} className="flex items-center">
-                  <div className={`w-3 h-3 rounded-full transition-all duration-500 ${step >= s ? "bg-secondary scale-125 shadow-lg shadow-secondary/50" : "bg-slate-200"}`}></div>
-                  {s < 3 && <div className={`w-8 h-0.5 mx-2 ${step > s ? "bg-secondary" : "bg-slate-200"}`}></div>}
+                  <div className={`w-2.5 h-2.5 md:w-3 md:h-3 rounded-full transition-all duration-500 ${step >= s ? "bg-secondary scale-125 shadow-lg shadow-secondary/50" : "bg-slate-200"}`}></div>
+                  {s < 3 && <div className={`w-6 md:w-8 h-0.5 mx-1.5 md:mx-2 ${step > s ? "bg-secondary" : "bg-slate-200"}`}></div>}
                 </div>
               ))}
-              <span className="ml-4 text-[10px] font-black uppercase text-slate-400 tracking-widest">Passo {step} de 3</span>
+              <span className="ml-2 md:ml-4 text-[9px] md:text-[10px] font-black uppercase text-slate-400 tracking-widest">Passo {step} de 3</span>
             </div>
 
-            <form onSubmit={handleSubmit} className="min-h-[350px] flex flex-col justify-between">
+            <form onSubmit={handleSubmit} className="min-h-[300px] md:min-h-[350px] flex flex-col justify-between">
               <AnimatePresence mode="wait">
                 {step === 1 && (
                   <motion.div
@@ -790,22 +790,22 @@ const MultiStepForm = () => {
                     animate={{ opacity: 1, x: 0 }}
                     exit={{ opacity: 0, x: -20 }}
                   >
-                    <label className="block text-xs font-black text-slate-400 mb-6 uppercase tracking-[0.2em]">Identificação</label>
-                    <h4 className="text-2xl font-black mb-8 text-primary">Como podemos chamar você ou sua empresa?</h4>
+                    <label className="block text-[10px] font-black text-slate-400 mb-4 md:mb-6 uppercase tracking-[0.2em]">Identificação</label>
+                    <h4 className="text-xl md:text-2xl font-black mb-6 md:mb-8 text-primary leading-tight">Como podemos chamar você ou sua empresa?</h4>
                     <input 
                       type="text" 
                       required
                       value={formData.name}
                       onChange={(e) => setFormData({...formData, name: e.target.value})}
                       placeholder="Ex: João da Silva / Posto Central"
-                      className="w-full p-6 bg-slate-50 border-2 border-slate-100 rounded-[24px] focus:outline-none focus:border-secondary focus:bg-white transition-all text-lg font-bold"
+                      className="w-full p-4 md:p-6 bg-slate-50 border-2 border-slate-100 rounded-2xl md:rounded-[24px] focus:outline-none focus:border-secondary focus:bg-white transition-all text-base md:text-lg font-bold"
                     />
-                    <div className="mt-12">
+                    <div className="mt-8 md:mt-12">
                       <button 
                         type="button"
                         onClick={nextStep}
                         disabled={!formData.name}
-                        className="w-full bg-primary text-white p-6 rounded-[24px] font-black text-lg hover:bg-primary-light transition-all shadow-xl active:scale-95 disabled:opacity-50 disabled:cursor-not-allowed"
+                        className="w-full bg-primary text-white p-4 md:p-6 rounded-2xl md:rounded-[24px] font-black text-base md:text-lg hover:bg-primary-light transition-all shadow-xl active:scale-95 disabled:opacity-50 disabled:cursor-not-allowed"
                       >
                         Próximo Passo
                       </button>
@@ -820,9 +820,9 @@ const MultiStepForm = () => {
                     animate={{ opacity: 1, x: 0 }}
                     exit={{ opacity: 0, x: -20 }}
                   >
-                    <label className="block text-xs font-black text-slate-400 mb-6 uppercase tracking-[0.2em]">Dimensionamento</label>
-                    <h4 className="text-2xl font-black mb-8 text-primary">Qual o tamanho da sua equipe atual?</h4>
-                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <label className="block text-[10px] font-black text-slate-400 mb-4 md:mb-6 uppercase tracking-[0.2em]">Dimensionamento</label>
+                    <h4 className="text-xl md:text-2xl font-black mb-6 md:mb-8 text-primary leading-tight">Qual o tamanho da sua equipe atual?</h4>
+                    <div className="grid grid-cols-2 gap-3 md:gap-4">
                       {["1 a 10", "11 a 30", "31 a 100", "+100"].map(opt => (
                         <button 
                           key={opt}
@@ -831,7 +831,7 @@ const MultiStepForm = () => {
                             setFormData({...formData, employees: opt});
                             nextStep();
                           }}
-                          className={`p-6 border-2 rounded-[24px] text-center font-black transition-all ${
+                          className={`p-4 md:p-6 border-2 rounded-2xl md:rounded-[24px] text-center font-black transition-all text-sm md:text-base ${
                             formData.employees === opt 
                             ? "border-secondary bg-secondary/5 text-secondary" 
                             : "border-slate-100 text-slate-600 hover:border-secondary hover:bg-secondary/5 hover:text-secondary"
@@ -841,7 +841,7 @@ const MultiStepForm = () => {
                         </button>
                       ))}
                     </div>
-                    <button type="button" onClick={prevStep} className="mt-8 text-slate-400 font-bold flex items-center gap-2 hover:text-primary transition-colors">
+                    <button type="button" onClick={prevStep} className="mt-6 md:mt-8 text-slate-400 font-bold flex items-center gap-2 hover:text-primary transition-colors text-sm">
                       Voltar
                     </button>
                   </motion.div>
@@ -854,27 +854,27 @@ const MultiStepForm = () => {
                     animate={{ opacity: 1, x: 0 }}
                     exit={{ opacity: 0, x: -20 }}
                   >
-                    <label className="block text-xs font-black text-slate-400 mb-6 uppercase tracking-[0.2em]">Contato Direto</label>
-                    <h4 className="text-2xl font-black mb-8 text-primary">Qual seu melhor WhatsApp?</h4>
+                    <label className="block text-[10px] font-black text-slate-400 mb-4 md:mb-6 uppercase tracking-[0.2em]">Contato Direto</label>
+                    <h4 className="text-xl md:text-2xl font-black mb-6 md:mb-8 text-primary leading-tight">Qual seu melhor WhatsApp?</h4>
                     <input 
                       type="tel" 
                       required
                       value={formData.phone}
                       onChange={(e) => setFormData({...formData, phone: e.target.value})}
                       placeholder="(00) 00000-0000"
-                      className="w-full p-6 bg-slate-50 border-2 border-slate-100 rounded-[24px] focus:outline-none focus:border-secondary focus:bg-white transition-all text-lg font-bold"
+                      className="w-full p-4 md:p-6 bg-slate-50 border-2 border-slate-100 rounded-2xl md:rounded-[24px] focus:outline-none focus:border-secondary focus:bg-white transition-all text-base md:text-lg font-bold"
                     />
-                    <p className="mt-6 text-sm text-slate-400 font-medium">Enviaremos o resultado do diagnóstico em PDF pelo Whats.</p>
-                    <div className="mt-12">
+                    <p className="mt-4 md:mt-6 text-xs md:text-sm text-slate-400 font-medium leading-relaxed">Enviaremos o resultado do diagnóstico em PDF pelo Whats.</p>
+                    <div className="mt-8 md:mt-12">
                       <button 
                         type="submit"
                         disabled={!formData.phone}
-                        className="w-full bg-primary text-white p-6 rounded-[24px] font-black text-lg hover:bg-primary-light transition-all shadow-2xl shadow-primary/40 active:scale-95 disabled:opacity-50 disabled:cursor-not-allowed"
+                        className="w-full bg-primary text-white p-4 md:p-6 rounded-2xl md:rounded-[24px] font-black text-base md:text-lg hover:bg-primary-light transition-all shadow-2xl shadow-primary/40 active:scale-95 disabled:opacity-50 disabled:cursor-not-allowed"
                       >
                         Gerar meu Diagnóstico
                       </button>
                     </div>
-                    <button type="button" onClick={prevStep} className="mt-8 text-slate-400 font-bold flex items-center gap-2 hover:text-primary transition-colors">
+                    <button type="button" onClick={prevStep} className="mt-6 md:mt-8 text-slate-400 font-bold flex items-center gap-2 hover:text-primary transition-colors text-sm">
                       Voltar
                     </button>
                   </motion.div>
