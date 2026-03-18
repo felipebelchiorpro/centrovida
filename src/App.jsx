@@ -65,10 +65,20 @@ const Header = () => {
       isScrolled ? "py-2 md:py-4" : "py-4 md:py-8"
     }`}>
       <div className="container mx-auto px-4 md:px-6">
-        <div className={`grid grid-cols-2 lg:grid-cols-3 items-center px-6 md:px-8 py-3 md:py-4 transition-all duration-500 ${
+        <div className={`flex items-center justify-between px-6 md:px-8 py-3 md:py-4 transition-all duration-500 ${
           isScrolled || isMobileMenuOpen ? "bg-white/90 backdrop-blur-xl shadow-2xl shadow-primary/5 rounded-3xl md:rounded-[32px] border border-white/20" : "bg-transparent"
         }`}>
-          {/* Left: Navigation (Desktop) */}
+          {/* Left: Mobile Menu Toggle (Only on Mobile) */}
+          <div className="lg:hidden">
+            <button 
+              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+              className="p-2 -ml-2 text-primary hover:bg-slate-50 rounded-xl transition-colors"
+            >
+              {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
+            </button>
+          </div>
+
+          {/* Left: Navigation (Desktop Only) */}
           <nav className="hidden lg:flex items-center space-x-8">
             {navLinks.map((item) => (
               <a 
@@ -82,23 +92,13 @@ const Header = () => {
             ))}
           </nav>
 
-          {/* Left: Mobile Menu Toggle */}
-          <div className="lg:hidden flex items-center">
-            <button 
-              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              className="p-2 text-primary hover:bg-slate-50 rounded-xl transition-colors"
-            >
-              {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
-            </button>
+          {/* Center: Branding (Responsive) */}
+          <div className="flex flex-col items-center group cursor-pointer text-center flex-1 lg:flex-none">
+            <span className="text-lg md:text-2xl font-black text-primary tracking-tighter leading-none">CENTRO VIDA</span>
+            <span className="text-[6px] md:text-[9px] text-slate-400 font-bold tracking-[0.3em] md:tracking-[0.4em] uppercase mt-1">MEDICINA E SEGURANÇA DO TRABALHO</span>
           </div>
 
-          {/* Center: Branding */}
-          <div className="flex flex-col items-center group cursor-pointer text-center">
-            <span className="text-xl md:text-2xl font-black text-primary tracking-tighter leading-none">CENTRO VIDA</span>
-            <span className="text-[7px] md:text-[9px] text-slate-400 font-bold tracking-[0.3em] md:tracking-[0.4em] uppercase mt-1">MEDICINA E SEGURANÇA DO TRABALHO</span>
-          </div>
-
-          {/* Right: CTA */}
+          {/* Right: CTA (Desktop) */}
           <div className="hidden lg:flex items-center justify-end gap-6">
             <button className="flex items-center gap-3 bg-primary hover:bg-primary-dark text-white px-8 py-3.5 rounded-2xl text-xs font-black transition-all shadow-xl shadow-primary/20 active:scale-95">
               Falar com Especialista
@@ -106,10 +106,10 @@ const Header = () => {
             </button>
           </div>
           
-          {/* Right: Mobile CTA Icon */}
-          <div className="lg:hidden flex justify-end">
-            <a href="https://wa.me/5519998397305" target="_blank" rel="noreferrer" className="bg-primary p-3 rounded-xl text-white shadow-lg shadow-primary/20">
-              <Phone size={20} />
+          {/* Right: Mobile Phone Icon (Only on Mobile) */}
+          <div className="lg:hidden">
+            <a href="https://wa.me/5519998397305" target="_blank" rel="noreferrer" className="p-2 -mr-2 text-primary hover:bg-slate-50 rounded-xl transition-colors block">
+              <Phone size={22} />
             </a>
           </div>
         </div>
