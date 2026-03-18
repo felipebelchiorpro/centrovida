@@ -1,0 +1,53 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #003366;
+  --color-primary-light: #004080;
+  --color-primary-dark: #00264d;
+  
+  --color-secondary: #00A3FF;
+  --color-secondary-light: #33B5FF;
+  --color-secondary-dark: #0082CC;
+  
+  --color-accent-bg: #F5F7FA;
+  
+  --font-sans: "Inter", "system-ui", "sans-serif";
+}
+
+:root {
+  --primary: #003366;
+  --secondary: #00A3FF;
+  --accent: #F5F7FA;
+}
+
+body {
+  @apply font-sans text-slate-800 bg-white antialiased;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  @apply font-bold tracking-tight text-primary;
+}
+
+/* Iceberg Effect Custom Styles */
+.iceberg-container {
+  position: relative;
+  overflow: hidden;
+}
+
+.iceberg-gradient {
+  background: linear-gradient(180deg, #FFFFFF 0%, #E6F0FF 100%);
+}
+
+.glass-morphism {
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.step-active {
+  @apply border-secondary text-secondary;
+}
+
+.step-inactive {
+  @apply border-slate-200 text-slate-400;
+}
